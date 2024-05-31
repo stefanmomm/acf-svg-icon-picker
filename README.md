@@ -1,6 +1,10 @@
-# ACF Icon Selector Field
+# ACF SVG Icon Picker Field
 
-Allows you to create an 'icon-picker' acf-field.
+Forked from [houke/acf-icon-picker](https://github.com/houke/acf-icon-picker), updated to work with ACF 6.3+
+
+---
+
+Allows you to create an 'svg-icon-picker' acf-field.
 
 ---
 
@@ -89,6 +93,7 @@ add_filter('acf_icon_url',
 
 ## Changelog
 
+* 2.0.0 - Fix for ACF 6.3 which now has an official icon-picker field + merged open PRs from [Levdbas](https://github.com/houke/acf-icon-picker/pull/38) & [phschmanau](https://github.com/houke/acf-icon-picker/pull/37)
 * 1.9.1 - ACF 6 compatibility fix. Thanks to [idflood](https://github.com/houke/acf-icon-picker/pull/30)
 * 1.9.0 - Fix issue with Gutenberg preview not updating when removing. Thanks to [cherbst](https://github.com/houke/acf-icon-picker/pull/23)
 * 1.8.0 - Fix issue with Gutenberg not saving icon. Thanks to [tlewap](https://github.com/houke/acf-icon-picker/pull/17)
