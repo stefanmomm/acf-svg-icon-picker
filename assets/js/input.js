@@ -131,10 +131,9 @@
           }).css({
             transform: `translate(${x}px, ${y}px)`
           });
-          $el.find('.icons-list__name').text(svg['name'].replace(
-            /[-_]/g,
-            ' '
-          ));
+          const filename = svg['name'].split('.');
+          const name = filename[0].replace(/[-_]/g, ' ');
+          $el.find('.icons-list__name').text(name);
           $el.find('img').attr('src', `${iv.path}${svg['icon']}`);
           $list.append($el);
         }
