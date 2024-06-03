@@ -30,8 +30,8 @@
       var is_open = true;
       active_item = $(this);
 
-      if (iv.svgs.length == 0) {
-        var list = '<p>' + iv.no_icons_msg + '</p>';
+      if (acfSvgIconPicker.svgs.length == 0) {
+        var list = '<p>' + acfSvgIconPicker.no_icons_msg + '</p>';
       } else {
         var list = `<ul id="icons-list">`;
         list += `</ul>`;
@@ -55,7 +55,7 @@
       var $list = $('#icons-list');
       var margin = 200; // number of px to show above and below.
       var columns = 4;
-      var svgs = iv.svgs;
+      var svgs = acfSvgIconPicker.svgs;
 
       function setListHeight() {
         var total_lines = Math.ceil(svgs.length / columns);
@@ -134,7 +134,7 @@
           const filename = svg['name'].split('.');
           const name = filename[0].replace(/[-_]/g, ' ');
           $el.find('.icons-list__name').text(name);
-          $el.find('img').attr('src', `${iv.path}${svg['icon']}`);
+          $el.find('img').attr('src', `${acfSvgIconPicker.path}${svg['icon']}`);
           $list.append($el);
         }
 
@@ -148,7 +148,7 @@
       const iconsFilter = document.querySelector('#filterIcons');
 
       function filterIcons(wordToMatch) {
-        return iv.svgs.filter(icon => {
+        return acfSvgIconPicker.svgs.filter(icon => {
           var name = icon.name.replace(/[-_]/g, ' ');
           const regex = new RegExp(wordToMatch, 'gi');
           return name.match(regex);

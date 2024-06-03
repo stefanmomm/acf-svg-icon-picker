@@ -110,7 +110,7 @@ if (!class_exists('acf_field_svg_icon_picker')) {
             wp_register_script('acf-input-svg-icon-picker', "{$url}assets/js/input.js", array('acf-input'), $version);
             wp_enqueue_script('acf-input-svg-icon-picker');
 
-            wp_localize_script('acf-input-svg-icon-picker', 'iv', array(
+            wp_localize_script('acf-input-svg-icon-picker', 'acfSvgIconPicker', array(
                 'path' => $this->url,
                 'svgs' => $this->svgs,
                 'no_icons_msg' => sprintf(esc_html__('To add icons, add your svg files in the /%s folder in your theme.', 'acf-svg-icon-picker'), $this->path_suffix),
