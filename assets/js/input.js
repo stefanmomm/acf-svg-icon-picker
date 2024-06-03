@@ -199,7 +199,7 @@
 
   if (typeof acf.add_action !== 'undefined') {
     acf.add_action('ready append', function($el) {
-      acf.get_fields({ type: 'svg_icon_picker' }, $el).each(function() {
+      acf.get_fields({ type: 'icon_picker' }, $el).each(function() {
         initialize_field($(this));
       });
     });
