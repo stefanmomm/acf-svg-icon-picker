@@ -62,10 +62,12 @@ if (!class_exists('acf_field_svg_icon_picker')) {
             $files = array_diff(scandir($this->path), array('.', '..'));
             foreach ($files as $file) {
                 if (pathinfo($file, PATHINFO_EXTENSION) == 'svg') {
+                    $name = explode('.', $file)[0];
                     $filename = pathinfo($file, PATHINFO_FILENAME);
                     $icon = array(
-                        'name' => $filename,
-                        'icon' => $file,
+                        'name'    => $name,
+                        'filename' => $filename,
+                        'icon'    => $file,
                     );
                     array_push($this->svgs, $icon);
                 }
