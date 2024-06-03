@@ -7,5 +7,19 @@
       "name": "houke"
     }
   ],
-  "type": "wordpress-plugin"
+  "type": "wordpress-plugin",
+  "require-dev": {
+    "wp-coding-standards/wpcs": "^3.1",
+    "phpcompatibility/php-compatibility": "^9",
+    "10up/phpcs-composer": "^3.0"
+  },
+  "scripts": {
+    "cs": "@php ./vendor/bin/phpcs",
+    "cs:fix": "@php ./vendor/bin/phpcbf"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
 }
