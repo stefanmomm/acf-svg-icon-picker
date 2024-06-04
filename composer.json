@@ -5,6 +5,12 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "Mike Sheppard"
+    },
+    {
+      "name": "Erik van der Bas"
+    },
+    {
       "name": "houke"
     }
   ],
