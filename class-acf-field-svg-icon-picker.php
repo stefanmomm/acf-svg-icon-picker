@@ -73,6 +73,10 @@ class ACF_Field_Svg_Icon_Picker extends \acf_field {
 			$this->url  = get_stylesheet_directory_uri() . '/' . $this->path_suffix;
 		}
 
+		if ( ! file_exists( $this->path ) ) {
+			return;
+		}
+
 		$files = array_diff( scandir( $this->path ), array( '.', '..' ) );
 		foreach ( $files as $file ) {
 			if ( pathinfo( $file, PATHINFO_EXTENSION ) === 'svg' ) {
