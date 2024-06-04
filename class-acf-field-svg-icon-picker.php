@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-	/**
-	 * Field class for the SVG Icon Picker field.
-	 */
+/**
+ * Field class for the SVG Icon Picker field.
+ */
 class ACF_Field_Svg_Icon_Picker extends \acf_field {
 
 	/**
