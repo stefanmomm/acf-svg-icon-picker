@@ -2,6 +2,7 @@
   "name": "smithfield-studio/acf-svg-icon-picker",
   "description": "Add ACF field for selecting SVG icons.",
   "minimum-stability": "stable",
+  "license": "MIT",
   "authors": [
     {
       "name": "houke"
