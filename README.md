@@ -23,14 +23,20 @@ This ACF field type is compatible with:
 ## Installation
 
 ### via Composer
-1. Add a line to your repositories array: `{ "type": "git", "url": "https://github.com/smithfield-stuido/acf-svg-icon-picker" }`
-2. Add a line to your require block: `"smithfield-stuido/acf-svg-icon-picker": "3.0.0"` or `"smithfield-studio/acf-svg-icon-picker": "dev-main"` for the latest development version
-3. Run: `composer update`
+Run `composer require smithfield-studio/acf-svg-icon-picker` and activate the plugin via the plugins admin page.
 
 ### Manually
 1. Copy the `acf-svg-icon-picker` folder into your `wp-content/plugins` folder
 2. Activate the Icon Selector plugin via the plugins admin page
 3. Create a new field via ACF and select the Icon Selector type
+
+## Switch from ACF Icon Picker to ACF SVG Icon Picker
+If you're coming from the original ACF Icon Picker plugin, you can switch to this plugin by following these steps:
+
+1. Deactivate the old *ACF Icon Picker plugin*
+2. Install the *ACF SVG Icon Picker plugin* via Composer or manually
+3. Activate the *ACF SVG Icon Picker plugin*
+4. Check if the field type is now available in your ACF field settings
 
 ## Filters
 
