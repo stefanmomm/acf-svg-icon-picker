@@ -94,13 +94,14 @@ add_filter('acf_icon_url',
 ## Using with [ACF Builder](https://github.com/StoutLogic/acf-builder) / [ACF Composer](https://github.com/Log1x/acf-composer)
 
 ```php
-$fields->addField('my_icon', 'icon-picker', [
+$fields->addField('my_icon', 'svg_icon_picker', [
     'label' => 'My Icon',
 ])
 ```
 
 ## Changelog
 
+* 3.1.0 - Changed name of field to `svg_icon_picker` to avoid conflicts with vanilla ACF Icon Picker field.
 * 3.0.0 - Revert to original ACF field name, quick tidy + README updates
 * 2.0.0 - Fix for ACF 6.3 which now has an official icon-picker field + merged open PRs from [Levdbas](https://github.com/houke/acf-icon-picker/pull/38) & [phschmanau](https://github.com/houke/acf-icon-picker/pull/37)
 * 1.9.1 - ACF 6 compatibility fix. Thanks to [idflood](https://github.com/houke/acf-icon-picker/pull/30)
