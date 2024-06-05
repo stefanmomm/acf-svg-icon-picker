@@ -1,18 +1,18 @@
-(function($) {
+(function ($) {
   var active_item;
   var item_width = 125;
   var item_height = 116 + 6;
   var recycled_items = [];
 
-  jQuery(document).on('click', 'li[data-svg]', function() {
+  jQuery(document).on('click', 'li[data-svg]', function () {
     var val = jQuery(this).attr('data-svg');
     active_item.find('input').val(val);
     active_item.find('.acf-svg-icon-picker__svg').html(
       '<img src="' +
-        jQuery(this)
-          .find('img')
-          .attr('src') +
-        '" alt=""/>'
+      jQuery(this)
+        .find('img')
+        .attr('src') +
+      '" alt=""/>'
     );
     jQuery('.acf-svg-icon-picker__popup-holder').trigger('close');
     jQuery('.acf-svg-icon-picker__popup-holder').remove();
@@ -25,7 +25,7 @@
   });
 
   function initialize_field($el) {
-    $el.find('.acf-svg-icon-picker__img').on('click', function(e) {
+    $el.find('.acf-svg-icon-picker__img').on('click', function (e) {
       e.preventDefault();
       var is_open = true;
       active_item = $(this);
@@ -48,7 +48,7 @@
       </div>`
       );
 
-      jQuery('.acf-svg-icon-picker__popup-holder').on('close', function() {
+      jQuery('.acf-svg-icon-picker__popup-holder').on('close', function () {
         is_open = false;
       });
 
@@ -63,7 +63,7 @@
       }
 
       function removeAllItems() {
-        $('[data-acf-icon-index]').each(function(i, el) {
+        $('[data-acf-icon-index]').each(function (i, el) {
           var $el = $(el);
           recycled_items.push($el);
           $el.remove();
@@ -81,12 +81,12 @@
         var index_max = Math.ceil(scroll_max / item_height) * columns;
 
         // remove unneeded items and add them to recycled items.
-        $('[data-acf-icon-index]').each(function(i, el) {
+        $('[data-acf-icon-index]').each(function (i, el) {
           var $el = $(el);
           var index = $el.attr('data-acf-icon-index');
           var name = $el.attr('data-svg');
           // Check if we have the element in the resulting array.
-          var elementExist = function() {
+          var elementExist = function () {
             return svgs.find(function (svg) {
               return svg.name === name;
             });
@@ -166,7 +166,7 @@
       iconsFilter.addEventListener('keyup', displayResults);
 
       // Closing
-      jQuery('.acf-svg-icon-picker__popup__close').on('click', function(e) {
+      jQuery('.acf-svg-icon-picker__popup__close').on('click', function (e) {
         e.stopPropagation();
         is_open = false;
         jQuery('.acf-svg-icon-picker__popup-holder').remove();
@@ -181,7 +181,7 @@
         .addClass('acf-svg-icon-picker__remove--active');
     }
 
-    $el.find('.acf-svg-icon-picker__remove').on('click', function(e) {
+    $el.find('.acf-svg-icon-picker__remove').on('click', function (e) {
       e.preventDefault();
       var parent = $(this).parents('.acf-svg-icon-picker');
       parent.find('input').val('');
@@ -198,8 +198,8 @@
   }
 
   if (typeof acf.add_action !== 'undefined') {
-    acf.add_action('ready append', function($el) {
-      acf.get_fields({ type: 'icon_picker' }, $el).each(function() {
+    acf.add_action('ready append', function ($el) {
+      acf.get_fields({ type: 'svg_icon_picker' }, $el).each(function () {
         initialize_field($(this));
       });
     });

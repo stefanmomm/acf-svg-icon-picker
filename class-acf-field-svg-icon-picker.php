@@ -57,7 +57,7 @@ class ACF_Field_Svg_Icon_Picker extends \acf_field {
 	 * We set the field name, label, category, defaults and l10n.
 	 */
 	public function __construct() {
-		$this->name        = 'icon-picker';
+		$this->name        = 'svg_icon_picker';
 		$this->label       = __( 'SVG Icon Picker', 'acf-svg-icon-picker' );
 		$this->category    = 'content';
 		$this->defaults    = array( 'initial_value' => '' );
@@ -134,7 +134,6 @@ class ACF_Field_Svg_Icon_Picker extends \acf_field {
 	 */
 	public function input_admin_enqueue_scripts() {
 		$url = ACF_SVG_ICON_PICKER_URL;
-
 		wp_register_script( 'acf-input-svg-icon-picker', "{$url}assets/js/input.js", array( 'acf-input' ), ACF_SVG_ICON_PICKER_VERSION, true );
 		wp_enqueue_script( 'acf-input-svg-icon-picker' );
 
