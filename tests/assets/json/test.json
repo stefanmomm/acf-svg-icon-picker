@@ -1,0 +1,92 @@
+{
+    "key": "group_6660211ac93b5",
+    "title": "Icon picker test",
+    "fields": [
+        {
+            "key": "field_666021191a35f",
+            "label": "Test flexible",
+            "name": "test_flexible",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_6660212d60dbb": {
+                    "key": "layout_6660212d60dbb",
+                    "name": "test_layout",
+                    "label": "Test layout",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6660213b1a360",
+                            "label": "Test text field",
+                            "name": "test_text_field",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_666021541a361",
+                            "label": "Test icon picker",
+                            "name": "test_icon_picker",
+                            "aria-label": "",
+                            "type": "svg_icon_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "initial_value": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "min": "",
+            "max": "",
+            "button_label": "Nieuwe regel"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1717576059
+}
+ 

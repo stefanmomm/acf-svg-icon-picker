@@ -36,7 +36,8 @@ If you're coming from the original ACF Icon Picker plugin, you can switch to thi
 1. Deactivate the old *ACF Icon Picker plugin*
 2. Install the *ACF SVG Icon Picker plugin* via Composer or manually
 3. Activate the *ACF SVG Icon Picker plugin*
-4. Check if the field type is now available in your ACF field settings
+4. Go over your field configurations and change the field type from `icon-picker` to `svg_icon_picker` in the field settings. Be aware of the underscores in the field type name.
+5. Check if the field type is now available in your ACF field settings
 
 ## Filters
 
