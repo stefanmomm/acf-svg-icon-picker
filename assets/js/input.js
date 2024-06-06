@@ -14,8 +14,7 @@
         .attr('src') +
       '" alt=""/>'
     );
-    jQuery('.acf-svg-icon-picker__popup-holder').trigger('close');
-    jQuery('.acf-svg-icon-picker__popup-holder').remove();
+    jQuery('.acf-svg-icon-picker__popup-holder').trigger('close').remove();
     jQuery('.acf-svg-icon-picker__img input').trigger('change');
 
     active_item
@@ -161,9 +160,17 @@
         setListHeight();
       }
 
+      function debounce(func, wait) {
+        var timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
       iconsFilter.focus();
 
-      iconsFilter.addEventListener('keyup', displayResults);
+      iconsFilter.addEventListener("keyup", debounce(displayResults, 300));
 
       // Closing
       jQuery('.acf-svg-icon-picker__popup__close').on('click', function (e) {
